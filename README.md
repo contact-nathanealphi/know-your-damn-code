@@ -171,7 +171,7 @@ guru-agent-skill/
 Clone this repository first:
 
 ```bash
-git clone https://github.com/<your-username>/guru-agent-skill.git
+git clone https://github.com/contact-nathanealphi/guru-agent-skill.git
 ```
 
 ### 1. Antigravity / Claude Code / Codex CLI / Open Agent Skills (`~/.agent/skills` or `~/.claude/skills`)
