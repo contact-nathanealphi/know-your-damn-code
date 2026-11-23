@@ -1,6 +1,8 @@
-# 🧠 Guru (`guru-agent-skill`)
+# 🧠 Know Your Damn Code (`/guru`)
 
-**Turn any AI coding agent into a Senior Staff Mentor, Adaptive Curriculum Manager, and Cornell Note-Taker — grounded directly in your real codebase.**
+> **"Don't know what your AI agent is doing, do you? Here is the ultimate skill for your agent to teach you — at least know your damn program well before it goes to production."**
+
+**Stop blind-shipping AI slop. Turn any AI coding agent into a ruthless Staff Engineer Mentor, Adaptive Curriculum Manager, and Cornell Note-Taker — grounded directly in your real codebase.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Agent Compatible](https://img.shields.io/badge/Compatible-Antigravity%20%7C%20Claude%20Code%20%7C%20Cursor%20%7C%20Windsurf%20%7C%20Codex%20%7C%20Copilot-success)](#installation)
@@ -8,11 +10,13 @@
 
 ---
 
-## 🤔 What is Guru & Why Does It Exist?
+## 🤔 What Is This & Why Do You Need It?
 
-AI coding assistants are great at shipping code fast—until you realize **you don't actually understand the codebase your AI just wrote**, or you're dropped into a massive legacy repository on day one and drown in hundreds of unfamiliar files.
+Let's be honest: you vibe-coded 10,000 lines with an AI agent in a weekend, everything "works on localhost," and **you have zero clue what 80% of the code actually does**. Or you just joined a massive legacy repository on day one and are drowning in unfamiliar files.
 
-Standard AI prompts fail at teaching because they:
+When that code hits production and breaks at 2 AM, prompting *"fix pls"* won't save you.
+
+Standard AI prompts fail at teaching you your own codebase because they:
 1. **Translate syntax instead of teaching engineering reasoning** ("this line loops over items" instead of *why* the architecture exists and what breaks in production if it fails).
 2. **Modify files uninvited** when you only asked a question.
 3. **Dump walls of text** with floating jargon and zero pacing.
@@ -155,7 +159,7 @@ erDiagram
 ## 📦 Repository Structure
 
 ```text
-guru-agent-skill/
+know-your-damn-code/
 ├── SKILL.md                  # Core mentor persona, guardrails, commands, flags & pacing
 ├── references/
 │   ├── curriculum.md         # Concept DAG, 0-4 mastery rules, spaced repetition & gap radar
@@ -171,7 +175,7 @@ guru-agent-skill/
 Clone this repository first:
 
 ```bash
-git clone https://github.com/contact-nathanealphi/guru-agent-skill.git
+git clone https://github.com/contact-nathanealphi/know-your-damn-code.git
 ```
 
 ### 1. Antigravity / Claude Code / Codex CLI / Open Agent Skills (`~/.agent/skills` or `~/.claude/skills`)
@@ -180,11 +184,11 @@ Copy the folder into your global or workspace skills directory:
 ```bash
 # Global skill (Antigravity / universal agent skills)
 mkdir -p ~/.agent/skills/guru
-cp -r guru-agent-skill/SKILL.md guru-agent-skill/references ~/.agent/skills/guru/
+cp -r know-your-damn-code/SKILL.md know-your-damn-code/references ~/.agent/skills/guru/
 
 # Claude Code (project or global)
 mkdir -p .claude/skills/guru
-cp -r guru-agent-skill/SKILL.md guru-agent-skill/references .claude/skills/guru/
+cp -r know-your-damn-code/SKILL.md know-your-damn-code/references .claude/skills/guru/
 ```
 
 ### 2. Cursor (`.cursor/rules`)
@@ -192,11 +196,11 @@ Copy the files into `.cursor/rules/guru/` or reference `SKILL.md` as an on-deman
 
 ```bash
 mkdir -p .cursor/rules/guru
-cp -r guru-agent-skill/SKILL.md guru-agent-skill/references .cursor/rules/guru/
+cp -r know-your-damn-code/SKILL.md know-your-damn-code/references .cursor/rules/guru/
 ```
 
 ### 3. Windsurf / GitHub Copilot / Gemini CLI
-Place `guru-agent-skill` inside your workspace `.agent/skills/guru/` (or `.github/skills/guru/`) and invoke `/guru` in chat.
+Place `know-your-damn-code` inside your workspace `.agent/skills/guru/` (or `.github/skills/guru/`) and invoke `/guru` in chat.
 
 ### 4. Web Chat (ChatGPT, Claude Web, Gemini Web)
 Upload `SKILL.md`, `references/curriculum.md`, and `references/notes.md` to a Custom GPT, Claude Project, or Gemini Gem. Since Web Chat has no local filesystem access, Guru automatically uses a compact **YAML State Block** (`<=25 lines`) at the end of each session so you can copy-paste your learning progress across chats.
